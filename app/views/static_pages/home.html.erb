@@ -17,19 +17,40 @@
     </div>
   </div>  
 <% else %>
+
 <div class="center hero-unit">
+  
+
   <h1>Welcome to the e-Micro-Blog</h1>
+  <h2>Home Page</h2>
 
-  <h2>
-    This is the home page for the
-    <a href=>e-Micro-Blog</a>
-    application.
-  </h2>
+  <h3>e-Micro-Blogg offers an easy way to collaborate, discuss, or share your thoughts with others. Sign in or Sign Up below if you do not have an account with us yet.</h3>
 
-  <h3>Connect with friends all over the world right away<h3>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+   <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 </div>
 
-<%= link_to image_tag("eblogger.jpeg", alt: "Rails"), 'http://rubyonrails.org/' %>
+
+<div id="myCarousel" class="carousel slide">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+    <div class="active item"><%= link_to image_tag("blogpage.jpg", alt: "Rails"), 'http://rubyonrails.org/' %></div>
+
+    <div class="active item"><%= link_to image_tag("blog1.jpg", alt: "Rails"), 'http://rubyonrails.org/' %></div>
+
+    <div class="active item"><%= link_to image_tag("blog2.jpg", alt: "Rails"), 'http://rubyonrails.org/' %></div>
+    
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+
+    <script>
+        $('.carousel').carousel({
+    interval: 3500
+    })
+    </script>
+
+    
+
 <% end %>
